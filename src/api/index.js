@@ -10,15 +10,8 @@ const url = `https://api.searoutes.com/route/v2/sea/${startLong},${startLat};${e
 export const fetchData = async () => {
   try {
     const response = await axios.get(url, config)
-    const data = response.features[0].properties
-    const selectData = { 
-      distance: data.distance, 
-      departure: data.departure,
-      arrival: data.arrival,
-      duration: data.duration,
-      speed: data.speed,  
-    }
-    return selectData;
+    const { distance, departure, arrival, duration, speed } = response.features[0].properties
+    return { distance, departure, arrival, duration, speed }
   } catch (error) {
     return new Error(error)
   };
