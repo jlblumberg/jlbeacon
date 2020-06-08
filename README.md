@@ -1,4 +1,4 @@
-### jlbeacon
+### jlBeacon
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f4880046-11b5-4b4e-b33b-3951d6e7be0f/deploy-status)](https://app.netlify.com/sites/covid-19-data-viz/deploys)
 
@@ -6,7 +6,7 @@
 
 ## <a name="Outline">Outline</a>
 
-A web app, built to try to secure an interview at [Beacon](https://beacon.com/). It allows users to find the best (fasted) sea-route for shipping freight between two lat-long coordinates. The app makes use of a private API called [Searoutes](searoutesAPI.com) to get the routing data. You can view the live site [here](https://covid-19-data-viz.netlify.app/).
+A web app built to secure an interview at [Beacon](https://beacon.com/). It allows users to find the best (fastest) sea-route for shipping freight between two lat-long coordinates. The app makes use of a private API called [Searoutes](searoutesAPI.com) to get the routing data. You can view the live site [here](https://covid-19-data-viz.netlify.app/).
 
 ## <a name="Installation_Instructions">Installation Instructions</a>
 
