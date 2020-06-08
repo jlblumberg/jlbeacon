@@ -9,7 +9,13 @@ describe('fetchData', () => {
   it('can handle fetching data correctly', async () => {
     axios.get.mockResolvedValue(mockResponse);
     const response = await fetchData();
-    await expect(response).toEqual(mockHandledResponse)
+    await expect(response).toEqual(mockHandledResponse);
+  });
+
+  it('can handle an erroneous response', async () => {
+    axios.get.mockRejectedValue('error message');
+    const rejectedResponse = await fetchData();
+    await expect(rejectedResponse).toEqual(new Error('error message'));
   });
 
 });

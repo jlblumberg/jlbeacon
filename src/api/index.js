@@ -18,8 +18,8 @@ export const fetchData = async () => {
       duration: data.duration,
       speed: data.speed,  
     }
-    return selectData
+    return selectData;
   } catch (error) {
-    
-  }
-}
+    return new Error(error)
+  };
+};
