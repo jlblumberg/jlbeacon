@@ -14,4 +14,9 @@ describe('Form', () => {
     expect(wrapper.find('#route-details-input').exists()).toEqual(true);
   });
 
+  it('has a button to submit the details', () => {
+    const wrapper = shallow(<Form/>);
+    expect(wrapper.find('#route-details-submit').exists()).toEqual(true);
+  });
+
 });

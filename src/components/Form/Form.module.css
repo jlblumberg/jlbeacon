@@ -1,12 +1,13 @@
 .form{
-  width: 40%;
-  margin-left: 50px !important;
-  margin-top: 50px !important;
+  max-width: 30%;
+  margin: 5% 10%;
 }
 
 .textField {
+  margin: 5px 0 !important;
+}
+
+.submitButton {
   margin-top: 5px !important;
   margin-bottom: 5px !important;
-  margin-left: 5px !important;
-  margin-right: 10px !important;
 }
