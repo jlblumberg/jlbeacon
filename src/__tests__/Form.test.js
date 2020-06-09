@@ -24,15 +24,21 @@ describe('Form', () => {
     const wrapper = shallow(<Form/>);
     expect(wrapper.find({ name: 'submit-button' }).prop('disabled')).toEqual(true);
   });
-
-  // it('submit button should become enabled when all fields are filled', () => {
-  //   const wrapper = shallow(<Form/>);
-  //   wrapper.find({ name: 'startLat' }).simulate('change', { target: { name: 'startLat', value: '12' } });
-  //   wrapper.find({ name: 'startLong' }).simulate('change', { target: { name: 'startLong', value: '13' } });
-  //   wrapper.find({ name: 'endLat' }).simulate('change', { target: { name: 'endLat', value: '14' } });
-  //   wrapper.find({ name: 'endLong' }).simulate('change', { target: { name: 'endLong', value: '15' } });
-  //   wrapper.find({ name: 'submit-button' }).simulate('click');
-  //   expect(wrapper.find({ name: 'submit-button' }).prop('disabled')).toEqual(false);
-  // });
+  
+  it('fields default to blank, but change on fill', () => {
+    const wrapper = shallow(<Form/>);
+    expect(wrapper.find({ name: 'startLat' }).prop('value')).toEqual('');
+    expect(wrapper.find({ name: 'startLong' }).prop('value')).toEqual('');
+    expect(wrapper.find({ name: 'endLat' }).prop('value')).toEqual('');
+    expect(wrapper.find({ name: 'endLong' }).prop('value')).toEqual('');
+    wrapper.find({ name: 'startLat' }).simulate('change', { target: { name: 'startLat', value: '12' } });
+    wrapper.find({ name: 'startLong' }).simulate('change', { target: { name: 'startLong', value: '13' } });
+    wrapper.find({ name: 'endLat' }).simulate('change', { target: { name: 'endLat', value: '14' } });
+    wrapper.find({ name: 'endLong' }).simulate('change', { target: { name: 'endLong', value: '15' } });
+    expect(wrapper.find({ name: 'startLat' }).prop('value')).toEqual('12');
+    expect(wrapper.find({ name: 'startLong' }).prop('value')).toEqual('13');
+    expect(wrapper.find({ name: 'endLat' }).prop('value')).toEqual('14');
+    expect(wrapper.find({ name: 'endLong' }).prop('value')).toEqual('15');
+  });
 
 });

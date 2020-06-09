@@ -31,12 +31,23 @@ const Form = () => {
     setRequestedRoute({ ...requestedRoute, [key]:value })
   }
 
+  const handleSubmit = () => {
+    setIsSubmitDisabled(true)
+    setRequestedRoute({
+      startLat: '',
+      startLong: '',
+      endLat: '',
+      endLong: ''
+    });
+  }
+
   return(
     <form id='route-details-input' className={styles.form}>
       <Typography variant='h5' align='center' gutterBottom>Route Details</Typography>
       <TextField className={styles.textField}
         name="startLat"
         id="outlined-helperText"
+        value={requestedRoute.startLat}
         fullWidth
         label="Start Latitude"
         placeholder="00.00000000000000"
@@ -47,6 +58,7 @@ const Form = () => {
       <TextField className={styles.textField}
         name="startLong"
         id="outlined-helperText"
+        value={requestedRoute.startLong}
         fullWidth
         label="Start Longitude"
         placeholder="00.00000000000000"
@@ -57,6 +69,7 @@ const Form = () => {
       <TextField className={styles.textField}
         name="endLat"
         id="outlined-helperText"
+        value={requestedRoute.endLat}
         fullWidth
         label="End Latitude"
         placeholder="00.00000000000000"
@@ -67,6 +80,7 @@ const Form = () => {
       <TextField className={styles.textField}
         name="endLong"
         id="outlined-helperText"
+        value={requestedRoute.endLong}
         fullWidth
         label="End Longitude"
         placeholder="00.00000000000000"
@@ -81,7 +95,7 @@ const Form = () => {
           variant="contained"
           color="primary"
           disabled={isSubmitDisabled}
-          onClick={() => setIsSubmitDisabled(true)}
+          onClick={handleSubmit}
         >Submit</Button>
       </div>
     </form>
