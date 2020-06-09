@@ -8,4 +8,5 @@ describe('App', () => {
     let wrapper = mount(<App/>);
     expect(wrapper).toMatchSnapshot();
   });
+  
 });
