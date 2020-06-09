@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TextField, Typography, Button } from '@material-ui/core';
 import styles from './Form.module.css';
 
@@ -8,12 +8,26 @@ const Form = () => {
     startLong: '',
     endLat: '',
     endLong: ''
-  })
+  });
+
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+
+  const validateForm = () => {
+    setIsSubmitDisabled(
+      requestedRoute.startLat === '' ||
+      requestedRoute.startLong === '' ||
+      requestedRoute.endLat === '' ||
+      requestedRoute.endLong === ''
+      );
+  };
+
+  useEffect(() => {
+    validateForm();
+  }, [requestedRoute]);
 
   const handleFieldFill = (e) => {
     const key = e.target.name
     const value = e.target.value
-    console.log(key, value, requestedRoute)
     setRequestedRoute({ ...requestedRoute, [key]:value })
   }
 
@@ -62,10 +76,12 @@ const Form = () => {
       />
       <div id='route-details-submit' className={styles.submitButton}>
         <Button
+          name="submit-button"
           fullWidth
           variant="contained"
           color="primary"
-          onClick={() => console.log(requestedRoute)}
+          disabled={isSubmitDisabled}
+          onClick={() => setIsSubmitDisabled(true)}
         >Submit</Button>
       </div>
     </form>
