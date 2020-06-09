@@ -43,7 +43,8 @@ const Form = () => {
 
   return(
     <form id='route-details-input' className={styles.form}>
-      <Typography variant='h5' align='center' gutterBottom>Route Details</Typography>
+      <Typography variant='h5' color='textPrimary' align='center'>Route Details</Typography>
+      <Typography variant='body1' color='textSecondary' align='center' gutterBottom>All fields are required</Typography>
       <TextField className={styles.textField}
         name="startLat"
         id="outlined-helperText"
