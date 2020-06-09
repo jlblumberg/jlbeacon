@@ -65,7 +65,7 @@ const Form = () => {
           fullWidth
           variant="contained"
           color="primary"
-          onClick={(e) => console.log(requestedRoute)}
+          onClick={() => console.log(requestedRoute)}
         >Submit</Button>
       </div>
     </form>
