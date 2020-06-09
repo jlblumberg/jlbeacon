@@ -1,0 +1,13 @@
+.form{
+  max-width: 30%;
+  margin: 5% 10%;
+}
+
+.textField {
+  margin: 5px 0 !important;
+}
+
+.submitButton {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
