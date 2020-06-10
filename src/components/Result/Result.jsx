@@ -7,7 +7,7 @@ const Result = ({ data }) => {
       <div id='awaiting-request'>Please fill in the form and press submit</div>
     )
   }
-  
+
   const { distance, departure, arrival, duration, speed } = data
 
   return (

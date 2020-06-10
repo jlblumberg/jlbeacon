@@ -1,7 +1,7 @@
 import React from 'react';
 import Result from '../components/Result/Result';
 import { shallow } from 'enzyme';
-import mockResponse from '../__mocks__/mockResponse.json'
+import mockHandledResponse from '../__mocks__/mockHandledResponse.json'
 
 describe('Result', () => {
 
@@ -16,8 +16,9 @@ describe('Result', () => {
   });
 
   it('shows actual results when a request response is received', () => {
-    const wrapper = shallow(<Result data={mockResponse} />)
+    const wrapper = shallow(<Result data={mockHandledResponse} />)
     expect(wrapper.find('#results').text()).not.toContain('Please fill in the form and press submit')
+    expect(wrapper.find('#results').text()).toContain(901494)
   });
   
 
