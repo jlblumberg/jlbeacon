@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { TextField, Typography, Button } from '@material-ui/core';
 import styles from './Form.module.css';
 
-const Form = () => {
+const Form = ({handleSubmit}) => {
   const [requestedRoute, setRequestedRoute] = useState({
     startLat: '',
     startLong: '',
@@ -31,7 +31,7 @@ const Form = () => {
     setRequestedRoute({ ...requestedRoute, [key]:value })
   }
 
-  const handleSubmit = () => {
+  const clearFormAndState = () => {
     setIsSubmitDisabled(true)
     setRequestedRoute({
       startLat: '',
@@ -96,7 +96,7 @@ const Form = () => {
           variant="contained"
           color="primary"
           disabled={isSubmitDisabled}
-          onClick={handleSubmit}
+          onClick={() => { handleSubmit(); clearFormAndState(); }}
         >Submit</Button>
       </div>
     </form>
