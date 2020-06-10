@@ -25,7 +25,7 @@ const Result = ({ data }) => {
       <Typography variant='body2' color='textSecondary' align='center' gutterBottom>
         Note: there is a known bug with the transit duration result.
       </Typography>
-      <Grid item component={Card} variant='outlined' className={styles.card}>
+      <Grid item component={Card} variant='outlined'>
         <CardMedia
           component="img"
           alt="Sea container vessel"
