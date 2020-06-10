@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Result = (routeResults) => {
+const Result = ({ data }) => {
+  const { distance, departure, arrival, duration, speed } = data
+
   return (
     <div>
-      {console.log(routeResults.data)}
+      {console.log(data)}
     </div>
   )
 }
