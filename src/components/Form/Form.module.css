@@ -1,6 +1,9 @@
 .form{
   max-width: 30%;
-  margin: 5% 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 4%;
 }
 
 .textField {

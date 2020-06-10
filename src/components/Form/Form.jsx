@@ -19,20 +19,20 @@ const Form = ({handleSubmit}) => {
       requestedRoute.endLat === '' ||
       requestedRoute.endLong === ''
       );
-  };
+  }
 
   useEffect(() => {
     validateForm();
   }, [requestedRoute]);
 
   const handleFieldFill = (e) => {
-    const key = e.target.name
-    const value = e.target.value
-    setRequestedRoute({ ...requestedRoute, [key]:value })
+    const key = e.target.name;
+    const value = e.target.value;
+    setRequestedRoute({ ...requestedRoute, [key]:value });
   }
 
   const clearFormAndState = () => {
-    setIsSubmitDisabled(true)
+    setIsSubmitDisabled(true);
     setRequestedRoute({
       startLat: '',
       startLong: '',
@@ -44,7 +44,9 @@ const Form = ({handleSubmit}) => {
   return(
     <form id='route-details-input' className={styles.form}>
       <Typography variant='h5' color='textPrimary' align='center'>Route Details</Typography>
-      <Typography variant='body1' color='textSecondary' align='center' gutterBottom>All fields are required</Typography>
+      <Typography variant='body1' color='textSecondary' align='center' gutterBottom>
+        All fields are required. Longitude should be between -180 and 180, and latitude between -90 and 90.
+      </Typography>
       <TextField className={styles.textField}
         name="startLat"
         id="outlined-helperText"
@@ -96,11 +98,11 @@ const Form = ({handleSubmit}) => {
           variant="contained"
           color="primary"
           disabled={isSubmitDisabled}
-          onClick={() => { handleSubmit(); clearFormAndState(); }}
+          onClick={() => { handleSubmit(requestedRoute); clearFormAndState(); }}
         >Submit</Button>
       </div>
     </form>
-  )
+  );
 }
 
 export default Form;
