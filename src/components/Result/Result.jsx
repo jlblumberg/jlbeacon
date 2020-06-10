@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography } from '@material-ui/core';
 import styles from './Result.module.css';
+import { metersToKms, formatUnixTime, roundToTwoDecimals } from '../../Helpers';
 
 const Result = ({ data }) => {
 
@@ -20,7 +21,10 @@ const Result = ({ data }) => {
 
   return (
     <div id='results' className={styles.result}>
-      {distance}
+      Distance: {metersToKms(distance)} km<br/>
+      Departure: {formatUnixTime(departure)}<br />
+      Transit duration: {formatUnixTime(duration)}<br />
+      Arrival: {formatUnixTime(arrival)} (Assumed speed: {roundToTwoDecimals(speed)} km/hour)<br />
     </div>
   )
 }

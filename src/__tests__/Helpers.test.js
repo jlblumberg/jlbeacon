@@ -1,4 +1,4 @@
-import { metersToKms, formatUnixTime } from '../Helpers.js'
+import { metersToKms, formatUnixTime, roundToTwoDecimals } from '../Helpers.js'
 
 describe('Helper functions', () => {
 
@@ -7,7 +7,11 @@ describe('Helper functions', () => {
   });
 
   it('formatUnixTime converts unix time to a readable time', () => {
-    expect(formatUnixTime(1549312452)).toEqual("20:34:12");
+    expect(formatUnixTime(76189000)).toEqual("Thu, 01 Jan 1970 21:09:49 GMT");
+  });
+
+  it('roundToTwoDecimals rounds a long float down to two decimal places', () => {
+    expect(roundToTwoDecimals(45.242342342)).toEqual(45.24);
   });
 
 });
