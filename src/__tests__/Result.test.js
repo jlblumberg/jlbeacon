@@ -12,7 +12,7 @@ describe('Result', () => {
 
   it('shows a helpful prompt while awaiting a request', () => {
     const wrapper = shallow(<Result data={{ "distance": '' }}/>)
-    expect(wrapper.find('#awaiting-request').text()).toEqual('Please fill in the form and press submit')
+    expect(wrapper.find('#awaiting-request').text()).toContain('Please fill in the form')
   });
 
   it('shows actual results when a request response is received', () => {
