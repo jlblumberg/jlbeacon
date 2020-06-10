@@ -14,10 +14,10 @@ const Result = ({ data }) => {
           If nothing loads, please check that you have entered the search parameters correctly.
         </Typography>
       </div>
-    )
+    );
   }
 
-  const { distance, departure, arrival, duration, speed } = data
+  const { distance, departure, arrival, duration, speed } = data;
 
   return (
     <div id='results' className={styles.result}>
@@ -41,7 +41,7 @@ const Result = ({ data }) => {
         </CardContent>
       </Grid>
     </div>
-  )
+  );
 }
 
 export default Result;

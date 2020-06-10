@@ -7,7 +7,7 @@ describe('Helper functions', () => {
   });
 
   it('formatUnixTime converts unix time to a readable time', () => {
-    expect(formatUnixTime(76189000)).toEqual("Thu, 01 Jan 1970 21:09:49 GMT");
+    expect(formatUnixTime(76189000)).toEqual('Thu, 01 Jan 1970 21:09:49 GMT');
   });
 
   it('roundToTwoDecimals rounds a long float down to two decimal places', () => {

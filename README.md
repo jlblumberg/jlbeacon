@@ -47,5 +47,3 @@ TBC
 ## <a name="Future_work">Future work</a>
 
 TBC
-
-result speed is in km/h, distance is in m, departure/arrival/duration are in linux time

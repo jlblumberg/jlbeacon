@@ -19,20 +19,20 @@ const Form = ({handleSubmit}) => {
       requestedRoute.endLat === '' ||
       requestedRoute.endLong === ''
       );
-  };
+  }
 
   useEffect(() => {
     validateForm();
   }, [requestedRoute]);
 
   const handleFieldFill = (e) => {
-    const key = e.target.name
-    const value = e.target.value
-    setRequestedRoute({ ...requestedRoute, [key]:value })
+    const key = e.target.name;
+    const value = e.target.value;
+    setRequestedRoute({ ...requestedRoute, [key]:value });
   }
 
   const clearFormAndState = () => {
-    setIsSubmitDisabled(true)
+    setIsSubmitDisabled(true);
     setRequestedRoute({
       startLat: '',
       startLong: '',
@@ -102,7 +102,7 @@ const Form = ({handleSubmit}) => {
         >Submit</Button>
       </div>
     </form>
-  )
+  );
 }
 
 export default Form;
