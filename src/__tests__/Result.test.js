@@ -18,7 +18,7 @@ describe('Result', () => {
   it('shows actual results when a request response is received', () => {
     const wrapper = shallow(<Result data={mockHandledResponse} />)
     expect(wrapper.find('#results').text()).not.toContain('Please fill in the form and press submit')
-    expect(wrapper.find('#results').text()).toContain(901494)
+    expect(wrapper.find('#results').text()).toContain("Distance: 901.49 km")
   });
   
 
