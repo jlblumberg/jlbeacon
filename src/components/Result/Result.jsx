@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography } from '@material-ui/core';
+import { Typography, Card, Grid, CardContent, CardMedia } from '@material-ui/core';
 import styles from './Result.module.css';
 import { metersToKms, formatUnixTime, roundToTwoDecimals } from '../../Helpers';
 
@@ -21,10 +21,25 @@ const Result = ({ data }) => {
 
   return (
     <div id='results' className={styles.result}>
-      Distance: {metersToKms(distance)} km<br/>
-      Departure: {formatUnixTime(departure)}<br />
-      Transit duration: {formatUnixTime(duration)}<br />
-      Arrival: {formatUnixTime(arrival)} (Assumed speed: {roundToTwoDecimals(speed)} km/hour)<br />
+      <Typography variant='h5' color='textPrimary' align='center'>Results</Typography>
+      <Typography variant='body2' color='textSecondary' align='center' gutterBottom>
+        Note: there is a known bug with the transit duration result.
+      </Typography>
+      <Grid item component={Card} variant='outlined' className={styles.card}>
+        <CardMedia
+          component="img"
+          alt="Sea container vessel"
+          height="140"
+          src={"https://www.envirotainer.com/4a25f9/contentassets/ba04dfbea2ab4470810f614ccdd7011d/boat-cargo-ocean-above-1066762856-2240x960.jpg"}
+          title="Sea container vessel"
+        />
+        <CardContent>
+          <Typography>Distance: {metersToKms(distance)} km</Typography>
+          <Typography>Departure: {formatUnixTime(departure)}</Typography>
+          <Typography>Transit duration: {formatUnixTime(duration)}</Typography>
+          <Typography>Arrival: {formatUnixTime(arrival)} (assumed speed: {roundToTwoDecimals(speed)} km/hour)</Typography>
+        </CardContent>
+      </Grid>
     </div>
   )
 }
