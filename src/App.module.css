@@ -2,9 +2,23 @@ body {
   background-color: rgb(250, 250, 250);
 }
 
-.container {
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.componentContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+}
+
+.image {
+  justify-content: center;
+  width: 470px;
+  margin-top: 40px;
+  border:2px solid #ec9e44;
 }

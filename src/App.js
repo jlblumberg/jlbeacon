@@ -21,9 +21,14 @@ function App() {
   }
 
   return (
-    <div className={styles.container}>
-      <Form handleSubmit={handleSubmit}/>
-      <Result data={routeResults}/>
+    <div>
+      <div className={styles.imageContainer}>
+        <img className={styles.image} alt='JLBeacon' src='https://i.imgur.com/pHPe0ZP.png'></img>
+      </div>
+      <div className={styles.componentContainer}>
+        <Form handleSubmit={handleSubmit}/>
+        <Result data={routeResults}/>
+      </div>
     </div>
   );
 }
