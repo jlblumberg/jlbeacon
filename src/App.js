@@ -18,7 +18,6 @@ function App() {
   const handleSubmit = async (requestDetails) => {
     const { distance, departure, arrival, duration, speed } = await fetchData(requestDetails);
     setRouteResults({ distance, departure, arrival, duration, speed });
-    console.log("route state: ", routeResults);
   }
 
   return (
