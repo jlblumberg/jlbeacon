@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Result = () => {
+const Result = (routeResults) => {
   return (
     <div>
-      Result
+      {console.log(routeResults.data)}
     </div>
   )
 }
