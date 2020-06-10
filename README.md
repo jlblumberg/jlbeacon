@@ -2,11 +2,11 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f2c45712-8c74-4356-a884-8da15460419b/deploy-status)](https://app.netlify.com/sites/jlbeacon/deploys)
 
-[Outline](#Outline) | [Installation Instructions](#Installation_Instructions) | [Tech stack](#Tech_stack) | [Example use](#Example_use) | [Future work](#Future_work)
+[Outline](#Outline) | [Installation Instructions](#Installation_Instructions) | [Tech stack](#Tech_stack) | [Future work](#Future_work)
 
 ## <a name="Outline">Outline</a>
 
-A web app built to prove my commitment to securing an interview at [Beacon](https://beacon.com/). It allows users to find the best (fastest) sea-route for shipping freight between two lat-long coordinates. The app makes use of a private API called [Searoutes](searoutesAPI.com) to get the routing data. You can view the live site [here](https://jlbeacon.netlify.app/).
+A web app built to prove my commitment to securing an interview at [Beacon](https://beacon.com/). It allows users to find information about sea-routes between two lat-long coordinates, relevant to Beacon's work in freight forwarding. The app makes use of an API called [Searoutes](searoutesAPI.com) to get the routing data. You can view the live site [here](https://jlbeacon.netlify.app/).
 
 ## <a name="Installation_Instructions">Installation Instructions</a>
 
@@ -32,18 +32,18 @@ Front-end:
 - JavaScript
 - React (bootstrapped with Create React App)
 - HTML & CSS
-- Material UI
+- [Material UI](https://material-ui.com/)
 
 Testing:
 - Jest, Enzyme
 
 Data:
-- https://discover.searoutes.com/
-
-## <a name="Example_use">Example use</a>
-
-TBC
+- [Searoutes API](https://discover.searoutes.com/)
 
 ## <a name="Future_work">Future work</a>
 
-TBC
+Going forward, I'd like to continue working on the following:
+- Amend CSS to better handle mobile screens
+- Add an 'about' component
+- Add a GitHub link to the bottom
+- Fix transit duration bug (awaiting reply from API provider)
