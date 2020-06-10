@@ -96,7 +96,7 @@ const Form = ({handleSubmit}) => {
           variant="contained"
           color="primary"
           disabled={isSubmitDisabled}
-          onClick={() => { handleSubmit(); clearFormAndState(); }}
+          onClick={() => { handleSubmit(requestedRoute); clearFormAndState(); }}
         >Submit</Button>
       </div>
     </form>
