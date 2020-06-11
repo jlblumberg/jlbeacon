@@ -5,3 +5,12 @@
   margin-left: 4%;
   margin-right: 10%;
 }
+
+@media (max-width: 770px) {
+
+  .result {
+    max-width: 80%;
+    margin: 5%;
+  }
+
+}
