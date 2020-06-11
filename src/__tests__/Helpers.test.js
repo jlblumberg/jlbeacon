@@ -1,4 +1,4 @@
-import { metersToKms, formatUnixTime, roundToTwoDecimals } from '../Helpers.js'
+import { metersToKms, formatUnixTime, roundToTwoDecimals, convertDuration } from '../Helpers.js'
 
 describe('Helper functions', () => {
 
@@ -12,6 +12,10 @@ describe('Helper functions', () => {
 
   it('roundToTwoDecimals rounds a long float down to two decimal places', () => {
     expect(roundToTwoDecimals(45.242342342)).toEqual(45.24);
+  });
+
+  it('convertDuration takes milliseconds and returns human readable string', () => {
+    expect(convertDuration(76189000)).toEqual('0 days, 21 hours, and 9 minutes');
   });
 
 });
