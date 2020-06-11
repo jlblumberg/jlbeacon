@@ -22,3 +22,16 @@ body {
   margin-top: 40px;
   border:2px solid #ec9e44;
 }
+
+@media (max-width: 770px) {
+
+  .image {
+    width: 270px;
+  }
+
+  .componentContainer {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+}
