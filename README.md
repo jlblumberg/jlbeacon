@@ -13,6 +13,8 @@ A web app built to prove my commitment to securing an interview at [Beacon](http
 ### Prerequisite setup:
 - Clone this repo to your local machine and cd into it
 - Run `npm install` to install the necessary dependencies
+- Get an API key from [Searoutes](https://discover.searoutes.com/)
+- Make a .env file (with the command `touch .env`) and add your key to it (`REACT_APP_SEA_API_KEY=your-api-key-here`)
 
 ### Running the site
 
