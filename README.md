@@ -45,4 +45,3 @@ Data:
 Going forward, I'd like to continue working on the following:
 - Amend CSS to better handle mobile screens
 - Add an 'about' component
-- Fix transit duration bug (awaiting reply from API provider)
