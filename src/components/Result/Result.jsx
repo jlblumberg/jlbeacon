@@ -11,7 +11,8 @@ const Result = ({ data }) => {
       <Grid item component={Card} variant='outlined'>
         <CardContent>
           <Typography>
-            Please fill in the form and click submit. 
+            Welcome! You can use JLBeacon to find information about sea-routes between two lat-long coordinates.
+            To get started, please fill in the form and click submit. 
             Note that the results may take a few seconds to load. 
             If nothing loads, please check that you have entered the search parameters correctly.
           </Typography>
@@ -25,7 +26,7 @@ const Result = ({ data }) => {
 
   return (
     <div id='results' className={styles.result}>
-      <Typography variant='h5' color='textPrimary' align='center' gutterBottom>Route results:</Typography>
+      <Typography variant='h5' color='textPrimary' align='center' gutterBottom>Route results</Typography>
       <Grid item component={Card} variant='outlined'>
         <CardMedia
           component="img"
