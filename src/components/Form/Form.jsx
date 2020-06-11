@@ -43,7 +43,7 @@ const Form = ({handleSubmit}) => {
 
   return(
     <form id='route-details-input' className={styles.form}>
-      <Typography variant='h5' color='textPrimary' align='center'>Route Details</Typography>
+      <Typography variant='h5' color='textPrimary' align='center'>Route details</Typography>
       <Typography variant='body1' color='textSecondary' align='center' gutterBottom>
         All fields are required. Longitude should be between -180 and 180, and latitude between -90 and 90.
       </Typography>
