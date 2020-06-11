@@ -1,10 +1,11 @@
 import React from 'react';
 import { Typography, Box, Link } from '@material-ui/core';
+import styles from './Credit.module.css';
 
 const Credit = () => {
 
   return(
-    <Box pb={3} pt={3} id='credit'>
+    <Box pb={3} pt={3} id='credit' className={styles.credit}>
       <Typography variant="body2" color="textSecondary" align="center">
         {'Built by Josh Blumberg, to prove my commitment to working for Beacon. View the source code on '}
         <Link href="https://github.com/jlblumberg/jlbeacon">
