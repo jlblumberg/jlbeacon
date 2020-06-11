@@ -43,5 +43,5 @@ Data:
 ## <a name="Future_work">Future work</a>
 
 Going forward, I'd like to continue working on the following:
-- Amend CSS to better handle mobile screens
 - Add an 'about' component
+- Add error handling to UI
