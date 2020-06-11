@@ -41,56 +41,38 @@ const Form = ({handleSubmit}) => {
     });
   }
 
+  const textFieldDetails = [
+    { name: 'startLat', value: requestedRoute.startLat, label: "Start Latitude", helperText: "E.g. 53.53296196255539" },
+    { name: 'startLong', value: requestedRoute.startLong, label: "Start Longitude", helperText: "E.g. 9.965629577636719" },
+    { name: 'endLat', value: requestedRoute.endLat, label: "End Latitude", helperText: "E.g. 51.503039451809734" },
+    { name: 'endLong', value: requestedRoute.endLong, label: "End Longitude", helperText: "E.g. 0.45069694519042963" }
+  ];
+
+  const populateTextFields = () => {
+    return textFieldDetails.map((field, i) => (
+      <TextField
+        className={styles.textField}
+        key={i}
+        name={field.name}
+        id="outlined-helperText"
+        value={field.value}
+        fullWidth
+        label={field.label}
+        placeholder="00.00000000000000"
+        helperText={field.helperText}
+        variant="outlined"
+        onChange={(e) => handleFieldFill(e)}
+      />
+    ));
+  }
+
   return(
     <form id='route-details-input' className={styles.form}>
       <Typography variant='h5' color='textPrimary' align='center'>Route details</Typography>
       <Typography variant='body1' color='textSecondary' align='center' gutterBottom>
         All fields are required. Longitude should be between -180 and 180, and latitude between -90 and 90.
       </Typography>
-      <TextField className={styles.textField}
-        name="startLat"
-        id="outlined-helperText"
-        value={requestedRoute.startLat}
-        fullWidth
-        label="Start Latitude"
-        placeholder="00.00000000000000"
-        helperText="E.g. 53.53296196255539"
-        variant="outlined"
-        onChange={(e) => handleFieldFill(e)}
-      />
-      <TextField className={styles.textField}
-        name="startLong"
-        id="outlined-helperText"
-        value={requestedRoute.startLong}
-        fullWidth
-        label="Start Longitude"
-        placeholder="00.00000000000000"
-        helperText="E.g. 9.965629577636719"
-        variant="outlined"
-        onChange={(e) => handleFieldFill(e)}
-      />
-      <TextField className={styles.textField}
-        name="endLat"
-        id="outlined-helperText"
-        value={requestedRoute.endLat}
-        fullWidth
-        label="End Latitude"
-        placeholder="00.00000000000000"
-        helperText="E.g. 51.503039451809734"
-        variant="outlined"
-        onChange={(e) => handleFieldFill(e)}
-      />
-      <TextField className={styles.textField}
-        name="endLong"
-        id="outlined-helperText"
-        value={requestedRoute.endLong}
-        fullWidth
-        label="End Longitude"
-        placeholder="00.00000000000000"
-        helperText="E.g. 0.45069694519042963"
-        variant="outlined"
-        onChange={(e) => handleFieldFill(e)}
-      />
+      {populateTextFields()}
       <div id='route-details-submit' className={styles.submitButton}>
         <Button
           name="submit-button"
