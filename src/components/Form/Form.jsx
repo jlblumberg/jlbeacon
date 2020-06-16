@@ -12,17 +12,13 @@ const Form = ({handleSubmit}) => {
 
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
 
-  const validateForm = () => {
+  useEffect(() => {
     setIsSubmitDisabled(
       requestedRoute.startLat === '' ||
       requestedRoute.startLong === '' ||
       requestedRoute.endLat === '' ||
       requestedRoute.endLong === ''
-      );
-  }
-
-  useEffect(() => {
-    validateForm();
+    );
   }, [requestedRoute]);
 
   const handleFieldFill = (e) => {
