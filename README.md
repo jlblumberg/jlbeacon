@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f2c45712-8c74-4356-a884-8da15460419b/deploy-status)](https://app.netlify.com/sites/jlbeacon/deploys)
 
-[Outline](#Outline) | [Installation Instructions](#Installation_Instructions) | [Tech stack](#Tech_stack) | [Future work](#Future_work)
+[Outline](#Outline) | [Installation Instructions](#Installation_Instructions) | [Tech stack](#Tech_stack) | [Example use](#Example_use) | [Future work](#Future_work)
 
 ## <a name="Outline">Outline</a>
 
@@ -26,6 +26,7 @@ Production:
 - View the live site [here](https://jlbeacon.netlify.app/)
 
 ### Testing
+
 - All tests can be run with command `npm test`
 
 ## <a name="Tech_stack">Tech stack</a>
@@ -41,6 +42,16 @@ Testing:
 
 Data:
 - [Searoutes API](https://discover.searoutes.com/)
+
+## <a name="Example_use">Example use</a>
+
+Desktop experience:
+
+![desktop](https://i.imgur.com/rWlYZC8.gif)
+
+Mobile experience:
+
+![mobile](https://i.imgur.com/cgCl1tg.gif)
 
 ## <a name="Future_work">Future work</a>
 
