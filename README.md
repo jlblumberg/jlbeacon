@@ -47,11 +47,11 @@ Data:
 
 Desktop experience:
 
-![desktop](https://i.imgur.com/rWlYZC8.gif)
+![desktop](https://user-images.githubusercontent.com/56274153/84778043-4e52c500-afda-11ea-8ca5-1255a2f86505.gif)
 
 Mobile experience:
 
-![mobile](https://i.imgur.com/cgCl1tg.gif)
+![mobile](https://user-images.githubusercontent.com/56274153/84778256-a5589a00-afda-11ea-849d-63cd1581f8e2.gif)
 
 ## <a name="Future_work">Future work</a>
 
