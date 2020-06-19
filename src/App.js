@@ -24,8 +24,8 @@ function App() {
 
   return (
     <div>
-      <div className={styles.imageContainer}>
       <WelcomeModal/>
+      <div className={styles.imageContainer}>
         <img className={styles.image} alt='JLBeacon' src='https://i.imgur.com/pHPe0ZP.png'></img>
         <div className={styles.componentContainer}>
           <Form handleSubmit={handleSubmit}/>
