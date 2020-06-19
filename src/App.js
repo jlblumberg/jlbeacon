@@ -3,6 +3,7 @@ import styles from './App.module.css';
 import Form from './components/Form/Form';
 import Result from './components/Result/Result';
 import Credit from './components/Credit/Credit';
+import WelcomeModal from './components/WelcomeModal/WelcomeModal';
 import { useState } from 'react';
 import { fetchData } from './api/index';
 
@@ -24,6 +25,7 @@ function App() {
   return (
     <div>
       <div className={styles.imageContainer}>
+      <WelcomeModal/>
         <img className={styles.image} alt='JLBeacon' src='https://i.imgur.com/pHPe0ZP.png'></img>
         <div className={styles.componentContainer}>
           <Form handleSubmit={handleSubmit}/>
