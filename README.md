@@ -4,6 +4,9 @@
 
 [Outline](#Outline) | [Installation Instructions](#Installation_Instructions) | [Tech stack](#Tech_stack) | [Example use](#Example_use) | [Future work](#Future_work)
 
+:construction: **19/06/2020 update:** :construction:
+> Unfortunately, the Searoutes API which this project made use of is not free, and my free trial has ended. This means the site won't do the cool things that it used to do. That said, I'd still love for you to have a click around and view the source code. 
+
 ## <a name="Outline">Outline</a>
 
 A web app built to prove my commitment to securing an interview at [Beacon](https://beacon.com/). It allows users to find information about sea-routes between two lat-long coordinates, relevant to Beacon's work in freight forwarding. The app makes use of an API called [Searoutes](searoutesAPI.com) to get the routing data. You can view the live site [here](https://jlbeacon.netlify.app/).
