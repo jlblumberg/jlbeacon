@@ -5,7 +5,7 @@
 [Outline](#Outline) | [Installation Instructions](#Installation_Instructions) | [Tech stack](#Tech_stack) | [Example use](#Example_use) | [Future work](#Future_work)
 
 :construction: **19/06/2020 update** :construction:
-> Unfortunately, the Searoutes API which this project made use of is not free, and my free trial has ended. This means the site won't do the cool things that it used to do. That said, I'd still love for you to have a click around and view the source code. 
+> Unfortunately, the Searoutes API (which this project made use of) is not free, and my free trial has ended. This means the site won't do the cool things that it used to do. That said, I'd still love for you to have a click around and view the source code. You can still see the cool things the site used to do in the GIFs below.
 
 ## <a name="Outline">Outline</a>
 
